@@ -1,6 +1,6 @@
 # 👋 Welcome to My GitHub Profile
 
-![Header](https://raw.githubusercontent.com/yourusername/yourrepository/main/header.png)
+![Header](https://github.com/RafalSa/RafalSa/blob/main/th.jpg?raw=true)
 
 ## 📚 About Me
 I am a young, ambitious individual focused on continuous growth and development, eager to learn and make a positive impact. I am passionate about technology, programming and problem solving. This passion started in technical school when I learnt about PLC programming, I love programming and it is my life goal. 
