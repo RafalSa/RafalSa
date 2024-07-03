@@ -1,6 +1,6 @@
 # 👋 Welcome to My GitHub Profile
 
-https://scontent-waw2-1.xx.fbcdn.net/v/t39.30808-6/306888289_2271663649653083_1009270001251404620_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=gkhMP2EutXQQ7kNvgH1RFXm&_nc_ht=scontent-waw2-1.xx&oh=00_AYAl_u245mdJecqaWN4J8EYG5a641EXJ-XJdVTX_a7y5Cg&oe=668B4A05
+![Header](https://raw.githubusercontent.com/yourusername/yourrepository/main/header.png)
 
 ## 📚 About Me
 I am a young, ambitious individual focused on continuous growth and development, eager to learn and make a positive impact. I am passionate about technology, programming and problem solving. This passion started in technical school when I learnt about PLC programming, I love programming and it is my life goal. 
