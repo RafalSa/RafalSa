@@ -7,7 +7,7 @@ I am a young, ambitious individual focused on continuous growth and development,
 
 ## 🚀 Skills and Technologies
 - **Languages:** Python, C#
-- **Frameworks:** Django, Windows Forms, ASP.NET Core
+- **Frameworks:** Django, Windows Forms, ASP.NET Core, .NET
 - **Tools:** Git, GitHub, VS Code, VS
 - **Databases:** MySQL, JSON
 
