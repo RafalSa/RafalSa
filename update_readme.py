@@ -1,42 +1,64 @@
 import os
+import requests
 import subprocess
 
-# Funkcja do zliczania linii kodu w repozytorium za pomocą cloc
-def count_lines_in_repo(repo_path):
-    try:
-        # Uruchomienie cloc i wyciągnięcie wyniku
-        result = subprocess.run(['cloc', repo_path, '--json'], capture_output=True, text=True)
-        # Pobranie danych z wyniku (JSON)
-        data = eval(result.stdout)
-        return data['SUM']['code']  # Zwraca liczbę linii kodu
-    except Exception as e:
-        print(f"Error counting lines in {repo_path}: {e}")
-        return 0
+# GitHub API endpoint do pobierania repozytoriów użytkownika
+GITHUB_USERNAME = "RafalSa"  # Zastąp swoją nazwą użytkownika
+GITHUB_API_URL = f"https://api.github.com/users/{GITHUB_USERNAME}/repos"
 
-# Lista repozytoriów do analizy (podaj tutaj swoje repozytoria)
-repos = ['repo1', 'repo2', 'repo3']
+# Funkcja do pobierania listy repozytoriów
+def get_repos():
+    response = requests.get(GITHUB_API_URL)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        print(f"Error fetching repositories: {response.status_code}")
+        return []
+
+# Funkcja do zliczania linii kodu w danym repozytorium
+def count_lines_in_repo(repo_url, repo_name):
+    try:
+        # Klonowanie repozytorium do lokalnego katalogu tymczasowego
+        subprocess.run(['git', 'clone', repo_url, repo_name], check=True)
+        # Zliczanie linii kodu za pomocą cloc
+        result = subprocess.run(['cloc', repo_name, '--json'], capture_output=True, text=True)
+        data = eval(result.stdout)
+        # Usuwanie sklonowanego repozytorium
+        subprocess.run(['rm', '-rf', repo_name])
+        return data['SUM']['code']
+    except Exception as e:
+        print(f"Error counting lines for {repo_name}: {e}")
+        return 0
 
 # Ścieżka do pliku README.md
 readme_path = "README.md"
 
-# Odczytanie istniejącego pliku README.md
+# Pobieranie istniejącego pliku README.md
 with open(readme_path, "r") as readme_file:
     readme_content = readme_file.readlines()
 
-# Szukaj miejsca w pliku README.md, gdzie chcemy dodać zestawienie
+# Markery, gdzie chcemy dodać zestawienie linii kodu
 start_marker = "<!--START_SECTION:code_line_count-->\n"
 end_marker = "<!--END_SECTION:code_line_count-->\n"
 
 start_index = readme_content.index(start_marker) + 1
 end_index = readme_content.index(end_marker)
 
-# Generowanie nowych danych do umieszczenia w README.md
-new_content = [f"- **{repo}**: {count_lines_in_repo(repo)} linijek kodu\n" for repo in repos]
+# Pobieranie wszystkich repozytoriów
+repos = get_repos()
 
-# Zaktualizuj treść README.md
+# Generowanie nowego zestawienia
+new_content = []
+for repo in repos:
+    repo_name = repo['name']
+    repo_url = repo['html_url']
+    lines_of_code = count_lines_in_repo(repo_url, repo_name)
+    new_content.append(f"- **[{repo_name}]({repo_url})**: {lines_of_code} linijek kodu\n")
+
+# Aktualizacja zawartości README.md
 readme_content[start_index:end_index] = new_content
 
-# Zapisanie pliku README.md
+# Zapisanie zaktualizowanego pliku README.md
 with open(readme_path, "w") as readme_file:
     readme_file.writelines(readme_content)
 
