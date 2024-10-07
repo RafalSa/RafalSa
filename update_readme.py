@@ -1,6 +1,7 @@
 import os
 import requests
 import subprocess
+import json
 
 # GitHub API endpoint do pobierania repozytoriów użytkownika
 GITHUB_USERNAME = "RafalSa"  # Zastąp swoją nazwą użytkownika
@@ -22,9 +23,9 @@ def count_lines_in_repo(repo_url, repo_name):
         subprocess.run(['git', 'clone', repo_url, repo_name], check=True)
         # Zliczanie linii kodu za pomocą cloc
         result = subprocess.run(['cloc', repo_name, '--json'], capture_output=True, text=True)
-        data = eval(result.stdout)
+        data = json.loads(result.stdout)
         # Usuwanie sklonowanego repozytorium
-        subprocess.run(['rm', '-rf', repo_name])
+        subprocess.run(['rmdir', '/S', '/Q', repo_name], check=True)  # Użyj rmdir w Windows
         return data['SUM']['code']
     except Exception as e:
         print(f"Error counting lines for {repo_name}: {e}")
