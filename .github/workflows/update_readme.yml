@@ -14,7 +14,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Install Python dependencies
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'  # Ustal wersję Pythona, np. '3.8' lub '3.9'
+
+    - name: Install dependencies
       run: |
         sudo apt-get install -y cloc
         pip install requests
@@ -25,8 +30,8 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "GitHub Actions"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "GitHub Actions"
         git add README.md
-        git commit -m "Update README with code line count"
+        git commit -m "Update README with code line count" || echo "No changes to commit"
         git push
