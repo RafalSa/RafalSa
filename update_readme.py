@@ -19,13 +19,17 @@ def get_repos():
 # Funkcja do zliczania linii kodu w danym repozytorium
 def count_lines_in_repo(repo_url, repo_name):
     try:
+        # Usunięcie istniejącego folderu, jeśli już istnieje
+        if os.path.exists(repo_name):
+            subprocess.run(['rmdir', '/S', '/Q', repo_name], check=True)  # Użyj rmdir w Windows
+
         # Klonowanie repozytorium do lokalnego katalogu tymczasowego
         subprocess.run(['git', 'clone', repo_url, repo_name], check=True)
+
         # Zliczanie linii kodu za pomocą cloc
         result = subprocess.run(['cloc', repo_name, '--json'], capture_output=True, text=True)
         data = json.loads(result.stdout)
-        # Usuwanie sklonowanego repozytorium
-        subprocess.run(['rmdir', '/S', '/Q', repo_name], check=True)  # Użyj rmdir w Windows
+
         return data['SUM']['code']
     except Exception as e:
         print(f"Error counting lines for {repo_name}: {e}")
@@ -64,4 +68,3 @@ with open(readme_path, "w") as readme_file:
     readme_file.writelines(readme_content)
 
 print("README.md zostało zaktualizowane!")
-
