@@ -64,3 +64,4 @@ with open(readme_path, "w") as readme_file:
     readme_file.writelines(readme_content)
 
 print("README.md zostało zaktualizowane!")
+
