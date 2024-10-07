@@ -19,6 +19,12 @@ I am a young, ambitious individual focused on continuous growth and development,
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=RafalSa&show_icons=true&theme=radical)
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=RafalSa&layout=compact&theme=radical)
 
+## 📊 Lines of Code in Repositories
+
+<!--START_SECTION:code_line_count-->
+<!--END_SECTION:code_line_count-->
+
+
 ## 🔗 Connect with Me
 - [LinkedIn](https://www.linkedin.com/in/rafa%C5%82-sak-78116b270/)
 - [Facebook](https://www.facebook.com/rafaleksak/)
