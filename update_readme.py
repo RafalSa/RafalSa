@@ -4,7 +4,7 @@ import subprocess
 
 # GitHub API endpoint do pobierania repozytoriów użytkownika
 GITHUB_USERNAME = "RafalSa"  # Zastąp swoją nazwą użytkownika
-GITHUB_API_URL = f"https://api.github.com/users/{RafalSa}/repos"
+GITHUB_API_URL = f"https://api.github.com/users/{GITHUB_USERNAME}/repos"
 
 # Funkcja do pobierania listy repozytoriów
 def get_repos():
