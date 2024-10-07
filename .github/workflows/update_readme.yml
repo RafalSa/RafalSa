@@ -1,0 +1,30 @@
+name: Update README with code line count
+
+on:
+  schedule:
+    # Uruchamianie co 24 godziny o północy
+    - cron: "0 0 * * *"
+  workflow_dispatch:  # Możliwość ręcznego uruchomienia
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install cloc
+      run: sudo apt-get install -y cloc
+
+    - name: Count lines of code and update README
+      run: |
+        python update_readme.py
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "GitHub Actions"
+        git add README.md
+        git commit -m "Update README with code line count"
+        git push
