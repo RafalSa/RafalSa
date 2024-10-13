@@ -5,6 +5,8 @@ on:
     branches:
       - main
   workflow_dispatch:  # ręczne uruchomienie
+   schedule:
+    - cron: '0 0 * * *'
 
 permissions:
   contents: write
