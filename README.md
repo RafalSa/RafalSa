@@ -22,11 +22,11 @@ I am a young, ambitious individual focused on continuous growth and development,
 ## 📊 Lines of Code in Repositories
 
 <!--START_SECTION:code_line_count-->
-- **[CommitGenerator](https://github.com/RafalSa/CommitGenerator)**: 231 linijek kodu
-- **[EuroExplorer](https://github.com/RafalSa/EuroExplorer)**: 1177026 linijek kodu
-- **[projektObiektowe](https://github.com/RafalSa/projektObiektowe)**: 1172030 linijek kodu
-- **[RafalSa](https://github.com/RafalSa/RafalSa)**: 104 linijek kodu
-- **[SakuGames](https://github.com/RafalSa/SakuGames)**: 292 linijek kodu
+- **[CommitGenerator](https://github.com/RafalSa/CommitGenerator)**: 231 lines of code
+- **[EuroExplorer](https://github.com/RafalSa/EuroExplorer)**: 1177026 lines of code
+- **[projektObiektowe](https://github.com/RafalSa/projektObiektowe)**: 1172030 lines of code
+- **[RafalSa](https://github.com/RafalSa/RafalSa)**: 104 lines of code
+- **[SakuGames](https://github.com/RafalSa/SakuGames)**: 292 lines of code
 <!--END_SECTION:code_line_count-->
 
 
