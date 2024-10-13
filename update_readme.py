@@ -58,7 +58,7 @@ for repo in repos:
     repo_name = repo['name']
     repo_url = repo['html_url']
     lines_of_code = count_lines_in_repo(repo_url, repo_name)
-    new_content.append(f"- **[{repo_name}]({repo_url})**: {lines_of_code} linijek kodu\n")
+    new_content.append(f"- **[{repo_name}]({repo_url})**: {lines_of_code} lines of code\n")
 
 # Aktualizacja zawartości README.md
 readme_content[start_index:end_index] = new_content
