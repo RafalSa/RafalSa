@@ -1,8 +1,9 @@
 name: Update README with code line count
 
 on:
-  schedule:
-    - cron: '0 * * * *'  # Uruchamia co godzinę
+  push:  # Automatyczne uruchamianie po każdym pushu do dowolnej gałęzi
+    branches:
+      - '*'  # Działa dla każdej gałęzi
   workflow_dispatch:  # Możliwość ręcznego uruchomienia
 
 permissions:
