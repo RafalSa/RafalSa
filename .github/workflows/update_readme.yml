@@ -7,7 +7,7 @@ on:
   workflow_dispatch:  # Możliwość ręcznego uruchomienia
 
 permissions:
-  contents: write
+  contents: write  # Upewnienie się, że token ma odpowiednie uprawnienia
 
 jobs:
   update-readme:
@@ -21,17 +21,24 @@ jobs:
 
     - name: Install Python dependencies
       run: |
-        sudo apt-get install -y cloc
+        sudo apt-get update && sudo apt-get install -y cloc  # Zaktualizowanie pakietów przed instalacją
         pip install requests
 
     - name: Run Python script to update README
       run: |
         python update_readme.py
+        echo "Python script executed"
 
-    - name: Commit and push changes
+    - name: Check if README.md has changes
+      run: |
+        git diff --exit-code README.md || echo "README.md was modified"
+
+    - name: Commit and push changes if README.md was modified
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "GitHub Actions"
         git add README.md
-        git commit -m "Update README with code line count"
-        git push
+        git status  # Sprawdzenie statusu przed commitowaniem
+        git commit -m "Update README with code line count" || echo "No changes to commit"
+        git push || echo "Push failed or no changes to push"
+
