@@ -21,14 +21,14 @@ I am a young, ambitious individual focused on continuous growth and development,
 
 ## 📊 Lines of Code in Repositories
 
-<!--START_SECTION:code_line_count-->
+<!--START_SECTION:code_line_count--->
 - **[CommitGenerator](https://github.com/RafalSa/CommitGenerator)**: 231 lines of code
 - **[EuroExplorer](https://github.com/RafalSa/EuroExplorer)**: 1177887 lines of code
 - **[projektObiektowe](https://github.com/RafalSa/projektObiektowe)**: 1172030 lines of code
 - **[RafalSa](https://github.com/RafalSa/RafalSa)**: 106 lines of code
 - **[SakuGames](https://github.com/RafalSa/SakuGames)**: 292 lines of code
 - **[Skrypt-do-kod-w-Minecraft](https://github.com/RafalSa/Skrypt-do-kod-w-Minecraft)**: 81 lines of code
-<!--END_SECTION:code_line_count-->
+<!--END_SECTION:code_line_count--->
 
 
 ## 🔗 Connect with Me
