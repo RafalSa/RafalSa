@@ -37,4 +37,4 @@ jobs:
         git add README.md
         git status  # Wyświetli status przed commitowaniem
         git commit -m "Update README with code line count" || echo "No changes to commit"
-        git push || echo "Push failed or no changes to push"
+        git push || echo "Push failed or no changes to push "
