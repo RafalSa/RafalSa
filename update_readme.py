@@ -2,6 +2,8 @@ import os
 import requests
 import subprocess
 import json
+import shutil
+import platform
 
 # GitHub API endpoint do pobierania repozytoriów użytkownika
 GITHUB_USERNAME = "RafalSa"  # Zastąp swoją nazwą użytkownika
@@ -21,7 +23,10 @@ def count_lines_in_repo(repo_url, repo_name):
     try:
         # Usunięcie istniejącego folderu, jeśli już istnieje
         if os.path.exists(repo_name):
-            subprocess.run(['rmdir', '/S', '/Q', repo_name], check=True)  # Użyj rmdir w Windows
+            if platform.system() == "Windows":
+                subprocess.run(['rmdir', '/S', '/Q', repo_name], check=True)  # Działa w Windows
+            else:
+                shutil.rmtree(repo_name)  # Działa w Linux/Mac
 
         # Klonowanie repozytorium do lokalnego katalogu tymczasowego
         subprocess.run(['git', 'clone', repo_url, repo_name], check=True)
@@ -46,6 +51,13 @@ with open(readme_path, "r") as readme_file:
 start_marker = "<!--START_SECTION:code_line_count-->\n"
 end_marker = "<!--END_SECTION:code_line_count-->\n"
 
+# Dodanie markerów, jeśli ich brak
+if start_marker not in readme_content:
+    readme_content.insert(0, start_marker)
+if end_marker not in readme_content:
+    readme_content.append(end_marker)
+
+# Zlokalizowanie pozycji markerów
 start_index = readme_content.index(start_marker) + 1
 end_index = readme_content.index(end_marker)
 
