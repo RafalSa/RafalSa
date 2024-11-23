@@ -3,13 +3,13 @@ name: Update README with code line count
 on:
   push:
     branches:
-      - '*'  # Uruchamia się dla każdej gałęzi
+      - '*'  # Trigger for any branch push
     paths:
-      - '**/*'  # Uruchamia się na każdej zmianie w repozytorium, w tym nowych plikach
-  workflow_dispatch:  # Możliwość ręcznego uruchomienia
+      - '**/*'  # Trigger on any change in the repository, including new files
+  workflow_dispatch:  # Allows manual triggering
 
 permissions:
-  contents: write  # Upewnij się, że token ma odpowiednie uprawnienia
+  contents: write  # Ensure the token has write permissions
 
 jobs:
   update-readme:
@@ -17,24 +17,29 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3  # Upgraded to v3 for better compatibility with Node.js
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Install Python dependencies
+    - name: Install dependencies
       run: |
         sudo apt-get update && sudo apt-get install -y cloc
-        pip install requests
+        python3 -m pip install --upgrade pip
+        pip3 install requests
 
     - name: Run Python script to update README
       run: |
-        python update_readme.py
+        python3 update_readme.py  # Ensure python3 is used
 
     - name: Commit and push changes if README.md was modified
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "GitHub Actions"
         git add README.md
-        git status  # Wyświetli status przed commitowaniem
-        git commit -m "Update README with code line count" || echo "No changes to commit"
-        git push || echo "Push failed or no changes to push "
+        git status  # Shows the status before committing
+        if git diff --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Update README with code line count"
+          git push
+        fi
