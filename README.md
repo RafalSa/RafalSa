@@ -5,6 +5,10 @@
 ## 📚 About Me
 I am a young, ambitious individual focused on continuous growth and development, eager to learn and make a positive impact. I am passionate about technology, programming and problem solving. This passion started in technical school when I learnt about PLC programming, I love programming and it is my life goal. 
 
+## 📄 Download My CV
+You can download my CV here: [Download CV](https://github.com/RafalSa/RafalSa/raw/main/RafałSak.pdf)
+
+
 ## 🚀 Skills and Technologies
 - **Languages:** Python, C#
 - **Frameworks:** Django, Windows Forms, ASP.NET Core, .NET
