@@ -10,7 +10,7 @@ You can download my CV here: [Download CV](https://github.com/RafalSa/RafalSa/ra
 
 
 ## 🚀 Skills and Technologies
-- **Languages:** Python, C#
+- **Languages:** Python, C#, .NET
 - **Frameworks:** Django, Windows Forms, ASP.NET Core, .NET
 - **Tools:** Git, GitHub, VS Code, VS
 - **Databases:** MySQL, JSON
