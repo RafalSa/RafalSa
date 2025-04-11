@@ -10,10 +10,22 @@ You can download my CV here: [Download CV](https://github.com/RafalSa/RafalSa/bl
 
 
 ## 🚀 Skills and Technologies
+
+### ⭐ Skill Ratings
+- **Programming:** Python, C#, SQL (★★★☆☆)  
+- **Frameworks & Tools:** Django, .NET (WinForms, WPF), ASP.NET, Git/GitHub (★★★☆☆)  
+- **Frontend (basic knowledge):** HTML, CSS, JavaScript (★☆☆☆☆)  
+- **Data Science:** pandas, NumPy (★★☆☆☆)  
+- **APIs:** REST API integration, requests, JSON handling (★★☆☆☆)  
+- **Databases:** SQLite, PostgreSQL/MySQL (★★☆☆☆)  
+- **Security:** SHA256/SHA512 hashing, salting, password verification (★★☆☆☆)  
+- **Dev Tools:** Visual Studio, Jupyter Notebooks, VS Code (★★★☆☆)  
+
+### 📌 Technologies
 - **Languages:** Python, C#
-- **Frameworks:** Django, Windows Forms, ASP.NET Core, .NET
-- **Tools:** Git, GitHub, VS Code, VS
-- **Databases:** MySQL, JSON
+- **Frameworks:** Django, WinForms, ASP.NET Core, .NET
+- **Tools:** Git, GitHub, Visual Studio, VS Code
+- **Databases:** SQLite, MySQL, JSON
 
 ## 🌱 Current Learning Goals
 - A deeper understanding of machine learning and data science.
