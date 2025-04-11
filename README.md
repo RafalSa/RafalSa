@@ -6,7 +6,7 @@
 I am a young, ambitious individual focused on continuous growth and development, eager to learn and make a positive impact. I am passionate about technology, programming and problem solving. This passion started in technical school when I learnt about PLC programming, I love programming and it is my life goal. 
 
 ## 📄 Download My CV
-You can download my CV here: [Download CV](https://github.com/RafalSa/RafalSa/raw/main/RafałSak.pdf)
+You can download my CV here: [Download CV]([https://github.com/RafalSa/RafalSa/raw/main/RafałSak.pdf](https://github.com/RafalSa/RafalSa/blob/main/Rafal_Sak_CV_FINAL-1.pdf))
 
 
 ## 🚀 Skills and Technologies
