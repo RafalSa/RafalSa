@@ -38,12 +38,16 @@ You can download my CV here: [Download CV](https://github.com/RafalSa/RafalSa/bl
 ## 📊 Lines of Code in Repositories
 
 <!--START_SECTION:code_line_count-->
-- **[CommitGenerator](https://github.com/RafalSa/CommitGenerator)**: 231 lines of code
-- **[EuroExplorer](https://github.com/RafalSa/EuroExplorer)**: 1177887 lines of code
-- **[projektObiektowe](https://github.com/RafalSa/projektObiektowe)**: 1172030 lines of code
-- **[RafalSa](https://github.com/RafalSa/RafalSa)**: 106 lines of code
-- **[SakuGames](https://github.com/RafalSa/SakuGames)**: 292 lines of code
-- **[Skrypt-do-kod-w-Minecraft](https://github.com/RafalSa/Skrypt-do-kod-w-Minecraft)**: 81 lines of code
+- **[EuroExplorer](https://github.com/RafalSa/EuroExplorer)**: 1418290 lines of code
+- **[projektObiektowe](https://github.com/RafalSa/projektObiektowe)**: 1172970 lines of code
+- **[SmartHomeAssistant](https://github.com/RafalSa/SmartHomeAssistant)**: 217595 lines of code
+- **[SakuGames](https://github.com/RafalSa/SakuGames)**: 309 lines of code
+- **[CommitGenerator](https://github.com/RafalSa/CommitGenerator)**: 249 lines of code
+- **[RafalSa](https://github.com/RafalSa/RafalSa)**: 177 lines of code
+- **[LAB2_05.04](https://github.com/RafalSa/LAB2_05.04)**: 145 lines of code
+- **[PlanPieczeniaCiasta](https://github.com/RafalSa/PlanPieczeniaCiasta)**: 121 lines of code
+- **[LAB1_05.04](https://github.com/RafalSa/LAB1_05.04)**: 114 lines of code
+- **[Skrypt-do-kod-w-Minecraft](https://github.com/RafalSa/Skrypt-do-kod-w-Minecraft)**: 98 lines of code
 <!--END_SECTION:code_line_count-->
 
 
