@@ -5,7 +5,7 @@ on:
     branches:
       - '*'  # Trigger for any branch push
     paths:
-      - '**/*'  # Trigger on any change in the repository, including new files
+      - '**/*'  # Trigger on any change in the repository
   workflow_dispatch:  # Allows manual triggering
 
 permissions:
@@ -17,7 +17,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3  # Upgraded to v3 for better compatibility with Node.js
+      uses: actions/checkout@v3
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -29,15 +29,15 @@ jobs:
 
     - name: Run Python script to update README
       run: |
-        python3 update_readme.py  # Ensure python3 is used
+        python3 update_readme.py
 
     - name: Commit and push changes if README.md was modified
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "GitHub Actions"
         git add README.md
-        git status  # Shows the status before committing
-        if git diff --quiet; then
+        git status
+        if git diff --cached --quiet; then
           echo "No changes to commit"
         else
           git commit -m "Update README with code line count"
