@@ -44,9 +44,9 @@ You can download my CV here: [Download CV](https://github.com/RafalSa/RafalSa/bl
 - **[RafalSa](https://github.com/RafalSa/RafalSa)**: 106 lines of code
 - **[SakuGames](https://github.com/RafalSa/SakuGames)**: 292 lines of code
 - **[Skrypt-do-kod-w-Minecraft](https://github.com/RafalSa/Skrypt-do-kod-w-Minecraft)**: 81 lines of code
+
+
 <!--END_SECTION:code_line_count--->
-
-
 ## 🔗 Connect with Me
 - [LinkedIn](https://www.linkedin.com/in/rafa%C5%82-sak-78116b270/)
 - [Facebook](https://www.facebook.com/rafaleksak/)
