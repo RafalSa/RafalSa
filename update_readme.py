@@ -20,55 +20,62 @@ def count_lines_in_repo(repo_url, repo_name):
     try:
         if os.path.exists(repo_name):
             shutil.rmtree(repo_name)
-
-        subprocess.run(['git', 'clone', '--depth', '1', repo_url, repo_name], check=True)
-
+        subprocess.run(['git', 'clone', repo_url, repo_name], check=True)
         result = subprocess.run(['cloc', repo_name, '--json'], capture_output=True, text=True)
         data = json.loads(result.stdout)
-
-        return data.get('SUM', {}).get('code', 0)
+        return data['SUM']['code']
     except Exception as e:
         print(f"Error counting lines for {repo_name}: {e}")
         return 0
-    finally:
-        if os.path.exists(repo_name):
-            shutil.rmtree(repo_name)
 
-readme_path = "README.md"
+def update_readme():
+    readme_path = "README.md"
 
-with open(readme_path, "r", encoding="utf-8") as readme_file:
-    readme_content = readme_file.readlines()
+    if not os.path.exists(readme_path):
+        print("README.md not found!")
+        return
 
-start_marker = "<!--START_SECTION:code_line_count-->\n"
-end_marker = "<!--END_SECTION:code_line_count-->\n"
+    with open(readme_path, "r") as file:
+        content = file.readlines()
 
-if start_marker not in readme_content:
-    readme_content.insert(0, start_marker)
-if end_marker not in readme_content:
-    readme_content.append(end_marker)
+    start_marker = "<!--START_SECTION:code_line_count-->\n"
+    end_marker = "<!--END_SECTION:code_line_count-->\n"
 
-start_index = readme_content.index(start_marker) + 1
-end_index = readme_content.index(end_marker)
+    if start_marker not in content:
+        content.insert(0, start_marker)
+    if end_marker not in content:
+        content.insert(content.index(start_marker) + 1, end_marker)
 
-repos = get_repos()
+    start_index = content.index(start_marker) + 1
+    end_index = content.index(end_marker)
 
-repo_line_counts = []
-for repo in repos:
-    repo_name = repo['name']
-    repo_url = repo['html_url']
-    lines_of_code = count_lines_in_repo(repo['clone_url'], repo_name)
-    repo_line_counts.append((repo_name, repo_url, lines_of_code))
+    repos = get_repos()
+    repo_lines = []
 
-# Sortuj i wybierz TOP 10
-repo_line_counts.sort(key=lambda x: x[2], reverse=True)
-top_repos = repo_line_counts[:10]
+    print("Liczenie linii kodu...")
 
-new_section = [f"- **[{name}]({url})**: {lines} lines of code\n" for name, url, lines in top_repos]
+    for repo in repos:
+        repo_name = repo['name']
+        repo_url = repo['clone_url']
+        lines = count_lines_in_repo(repo_url, repo_name)
+        repo_lines.append((repo_name, repo['html_url'], lines))
 
-# Zastąp tylko sekcję pomiędzy znacznikami
-readme_content[start_index:end_index] = new_section
+    # Sortowanie i wybranie 10 największych
+    repo_lines.sort(key=lambda x: x[2], reverse=True)
+    top_10 = repo_lines[:10]
 
-with open(readme_path, "w", encoding="utf-8") as readme_file:
-    readme_file.writelines(readme_content)
+    new_section = [
+        f"- **[{name}]({url})**: {lines} lines of code\n"
+        for name, url, lines in top_10
+    ]
 
-print("README.md zostało zaktualizowane z top 10 repozytoriami!")
+    # Wstawienie nowej sekcji do README
+    content[start_index:end_index] = new_section
+
+    with open(readme_path, "w") as file:
+        file.writelines(content)
+
+    print("README.md zostało zaktualizowane!")
+
+if __name__ == "__main__":
+    update_readme()
