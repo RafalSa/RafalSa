@@ -80,10 +80,20 @@ repos_with_lines.sort(key=lambda x: x[2], reverse=True)
 # Wybieranie tylko 10 repozytoriów z największą liczbą linii kodu
 top_10_repos = repos_with_lines[:10]
 
+# Debugging: Sprawdzamy, czy wybrano 10 repozytoriów
+print("Top 10 repozytoria:")
+for repo_name, repo_url, lines_of_code in top_10_repos:
+    print(f"- {repo_name}: {lines_of_code} linii kodu")
+
 # Generowanie nowego zestawienia dla README
 new_content = []
 for repo_name, repo_url, lines_of_code in top_10_repos:
     new_content.append(f"- **[{repo_name}]({repo_url})**: {lines_of_code} lines of code\n")
+
+# Debugging: Sprawdzamy, co zostanie zapisane do pliku README
+print("Zawartość do zapisania w README.md:")
+for line in new_content:
+    print(line)
 
 # Aktualizacja zawartości README.md
 readme_content[start_index:end_index] = new_content
