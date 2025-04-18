@@ -64,12 +64,25 @@ end_index = readme_content.index(end_marker)
 # Pobieranie wszystkich repozytoriów
 repos = get_repos()
 
-# Generowanie nowego zestawienia
-new_content = []
+# Lista repozytoriów z liczbą linii kodu
+repos_with_lines = []
+
+# Generowanie zestawienia z repozytoriami
 for repo in repos:
     repo_name = repo['name']
     repo_url = repo['html_url']
     lines_of_code = count_lines_in_repo(repo_url, repo_name)
+    repos_with_lines.append((repo_name, repo_url, lines_of_code))
+
+# Sortowanie repozytoriów po liczbie linii kodu, w porządku malejącym
+repos_with_lines.sort(key=lambda x: x[2], reverse=True)
+
+# Wybieranie tylko 10 repozytoriów z największą liczbą linii kodu
+top_10_repos = repos_with_lines[:10]
+
+# Generowanie nowego zestawienia dla README
+new_content = []
+for repo_name, repo_url, lines_of_code in top_10_repos:
     new_content.append(f"- **[{repo_name}]({repo_url})**: {lines_of_code} lines of code\n")
 
 # Aktualizacja zawartości README.md
