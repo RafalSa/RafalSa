@@ -15,7 +15,7 @@ You can download my CV here: [Download CV](https://github.com/RafalSa/RafalSa/bl
 - **Programming:** Python, C#, SQL (★★★☆☆)  
 - **Frameworks & Tools:** Django, .NET (WinForms, WPF), ASP.NET, Git/GitHub (★★★☆☆)  
 - **Frontend (basic knowledge):** HTML, CSS, JavaScript (★☆☆☆☆)  
-- **Data Science:** pandas, NumPy (★★☆☆☆)  
+- **Data Science:** pandas, NumPy (★☆☆☆☆)  
 - **APIs:** REST API integration, requests, JSON handling (★★☆☆☆)  
 - **Databases:** SQLite, PostgreSQL/MySQL (★★☆☆☆)  
 - **Security:** SHA256/SHA512 hashing, salting, password verification (★★☆☆☆)  
