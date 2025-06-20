@@ -9,12 +9,23 @@ GITHUB_USERNAME = "RafalSa"
 GITHUB_API_URL = f"https://api.github.com/users/{GITHUB_USERNAME}/repos"
 
 def get_repos():
-    response = requests.get(GITHUB_API_URL)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        print(f"Error fetching repositories: {response.status_code}")
-        return []
+    repos = []
+    page = 1
+    per_page = 100  # maksymalna wartość dla GitHub API
+
+    while True:
+        url = f"{GITHUB_API_URL}?per_page={per_page}&page={page}"
+        response = requests.get(url)
+        if response.status_code != 200:
+            print(f"Error fetching repositories: {response.status_code}")
+            break
+        page_data = response.json()
+        if not page_data:
+            break
+        repos.extend(page_data)
+        page += 1
+
+    return repos
 
 def count_lines_in_repo(repo_url, repo_name):
     try:
