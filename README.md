@@ -46,7 +46,7 @@ You can download my CV here: [Download CV](https://github.com/RafalSa/RafalSa/bl
 - **[CommitGenerator](https://github.com/RafalSa/CommitGenerator)**: 249 lines of code
 - **[Mediator](https://github.com/RafalSa/Mediator)**: 201 lines of code
 - **[Visitor](https://github.com/RafalSa/Visitor)**: 200 lines of code
-- **[RafalSa](https://github.com/RafalSa/RafalSa)**: 181 lines of code
+- **[RafalSa](https://github.com/RafalSa/RafalSa)**: 190 lines of code
 - **[LAB2_05.04](https://github.com/RafalSa/LAB2_05.04)**: 145 lines of code
 <!--END_SECTION:code_line_count-->
 
