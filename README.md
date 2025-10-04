@@ -10,10 +10,22 @@ You can download my CV here: [Download CV](https://github.com/RafalSa/RafalSa/bl
 
 
 ## 🚀 Skills and Technologies
+
+### ⭐ Skill Ratings
+- **Programming:** Python, C#, SQL (★★★☆☆)  
+- **Frameworks & Tools:** Django, .NET (WinForms, WPF), ASP.NET, Git/GitHub (★★★☆☆)  
+- **Frontend (basic knowledge):** HTML, CSS, JavaScript (★☆☆☆☆)  
+- **Data Science:** pandas, NumPy (★☆☆☆☆)  
+- **APIs:** REST API integration, requests, JSON handling (★★☆☆☆)  
+- **Databases:** SQLite, PostgreSQL/MySQL (★★☆☆☆)  
+- **Security:** SHA256/SHA512 hashing, salting, password verification (★★☆☆☆)  
+- **Dev Tools:** Visual Studio, Jupyter Notebooks, VS Code (★★★☆☆)  
+
+### 📌 Technologies
 - **Languages:** Python, C#
-- **Frameworks:** Django, Windows Forms, ASP.NET Core, .NET
-- **Tools:** Git, GitHub, VS Code, VS
-- **Databases:** MySQL, JSON
+- **Frameworks:** Django, WinForms, ASP.NET Core, .NET
+- **Tools:** Git, GitHub, Visual Studio, VS Code
+- **Databases:** SQLite, MySQL, JSON
 
 ## 🌱 Current Learning Goals
 - A deeper understanding of machine learning and data science.
@@ -25,14 +37,18 @@ You can download my CV here: [Download CV](https://github.com/RafalSa/RafalSa/bl
 
 ## 📊 Lines of Code in Repositories
 
-<!--START_SECTION:code_line_count--->
-- **[CommitGenerator](https://github.com/RafalSa/CommitGenerator)**: 231 lines of code
-- **[EuroExplorer](https://github.com/RafalSa/EuroExplorer)**: 1177887 lines of code
-- **[projektObiektowe](https://github.com/RafalSa/projektObiektowe)**: 1172030 lines of code
-- **[RafalSa](https://github.com/RafalSa/RafalSa)**: 106 lines of code
-- **[SakuGames](https://github.com/RafalSa/SakuGames)**: 292 lines of code
-- **[Skrypt-do-kod-w-Minecraft](https://github.com/RafalSa/Skrypt-do-kod-w-Minecraft)**: 81 lines of code
-<!--END_SECTION:code_line_count--->
+<!--START_SECTION:code_line_count-->
+- **[EuroExplorer](https://github.com/RafalSa/EuroExplorer)**: 1418290 lines of code
+- **[projektObiektowe](https://github.com/RafalSa/projektObiektowe)**: 1172970 lines of code
+- **[SmartHomeAssistant](https://github.com/RafalSa/SmartHomeAssistant)**: 217595 lines of code
+- **[CMMS_by_RafalS](https://github.com/RafalSa/CMMS_by_RafalS)**: 1280 lines of code
+- **[SakuGames](https://github.com/RafalSa/SakuGames)**: 309 lines of code
+- **[CommitGenerator](https://github.com/RafalSa/CommitGenerator)**: 249 lines of code
+- **[Mediator](https://github.com/RafalSa/Mediator)**: 201 lines of code
+- **[Visitor](https://github.com/RafalSa/Visitor)**: 200 lines of code
+- **[RafalSa](https://github.com/RafalSa/RafalSa)**: 190 lines of code
+- **[LAB2_05.04](https://github.com/RafalSa/LAB2_05.04)**: 145 lines of code
+<!--END_SECTION:code_line_count-->
 
 
 ## 🔗 Connect with Me
@@ -45,4 +61,3 @@ If you have any questions or just want to say hi, feel free to reach out to me a
 ---
 
 Thank you for visiting my profile!
-
