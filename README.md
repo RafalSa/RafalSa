@@ -40,7 +40,7 @@ You can download my CV here: [Download CV](https://github.com/RafalSa/RafalSa/bl
 <!--START_SECTION:code_line_count-->
 - **[EuroExplorer](https://github.com/RafalSa/EuroExplorer)**: 1418290 lines of code
 - **[projektObiektowe](https://github.com/RafalSa/projektObiektowe)**: 1172970 lines of code
-- **[SmartHomeAssistant](https://github.com/RafalSa/SmartHomeAssistant)**: 217595 lines of code
+- **[SmartHomeAssistant](https://github.com/RafalSa/SmartHomeAssistant)**: 217633 lines of code
 - **[CMMS_by_RafalS](https://github.com/RafalSa/CMMS_by_RafalS)**: 1280 lines of code
 - **[SakuGames](https://github.com/RafalSa/SakuGames)**: 309 lines of code
 - **[CommitGenerator](https://github.com/RafalSa/CommitGenerator)**: 249 lines of code
